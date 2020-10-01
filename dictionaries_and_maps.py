@@ -3,7 +3,7 @@ n= input()
 n=int (n)
 d={}
 for i in range(n):
-    data = input().split(' ')
+    data = input().split('')
     d[data[0]] = data[1]
 
 b = sys.stdin.readlines()
