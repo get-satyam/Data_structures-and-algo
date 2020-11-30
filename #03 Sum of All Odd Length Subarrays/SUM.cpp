@@ -16,8 +16,7 @@ int main() {
         for (int j = i; j < n; j += 2) {
 
             for (int k = i; k <= j; k++) 
-                sum += a[k];
-            
+                sum += a[k];          
 
 
         }
