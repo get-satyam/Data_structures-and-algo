@@ -14,4 +14,5 @@ int main() {
     cin >> t.size;
     t.s = new int[t.size];
     return 0;
+    t.top =-1;
 }
