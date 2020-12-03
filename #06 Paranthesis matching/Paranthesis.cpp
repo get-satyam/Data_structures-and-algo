@@ -1,5 +1,5 @@
 #include<iostream>
-
+#include<conio.h>
 #include<cstring>
 
 using namespace std;
@@ -7,16 +7,16 @@ using namespace std;
 struct node
 {
         char data;
-        node * next;
+        struct node * next;
 
 } * top = NULL;
 
 
 void push (char da)
 {
-        node * t = new node;
+        struct node * t = new node;
         if(t == NULL)
-            cout<<"STack overflow";
+            cout<<"Stack overflow";
         else
         {
                 t->data = da;
@@ -28,7 +28,7 @@ void push (char da)
 }
 char pop()
 {
-        node *t;
+        struct node *t;
         char x = -1;
         if(top == NULL)
             cout<<"Stack is empty";
@@ -43,7 +43,7 @@ char pop()
         return x;
         
 }
-int matching(char * exp)
+int matching(char const *exp)
 {
         
 
@@ -51,7 +51,7 @@ int matching(char * exp)
         {
                 if(exp[i] == '(')
                     push(exp[i]);
-                else
+                else if(exp[i] == ')')
                 {
                     if(top = NULL)
                         return 0;
@@ -66,8 +66,8 @@ int matching(char * exp)
 }
 int main()
 {
-        char *exp = "((a+b)*(c-d)";
-
+        char const *exp = "((a+b)*(c-d)";
+      
         matching(exp);
         
         
