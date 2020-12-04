@@ -53,16 +53,16 @@ int matching(char const *exp)
                     push(exp[i]);
                 else if(exp[i] == ')')
                 {
-                    if(top = NULL)
+                    if(top == NULL)
                         return 0;
                     pop();
                 }
                 
         }
         if(top == NULL)
-            return 0;
-        else 
             return 1;
+        else 
+            return 0;
 }
 int main()
 {
