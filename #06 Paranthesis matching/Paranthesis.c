@@ -37,7 +37,7 @@ void Display() {
     struct Node * p;
     p = top;
     while (p != NULL) {
-        printf("%d ", p->data);
+        printf("%d ", p->ckdata);
         p = p -> next;
     }
     printf("\n");
